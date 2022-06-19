@@ -9,6 +9,7 @@ import { Navigation0HeaderComponent } from './navigation-subcomponents/navigatio
 import { Navigation1ThreadsComponent } from './navigation-subcomponents/navigation1-threads/navigation1-threads.component';
 import { Navigation2ChannelsComponent } from './navigation-subcomponents/navigation2-channels/navigation2-channels.component';
 import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/navigation3-direct-messages/navigation3-direct-messages.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,15 @@ import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/n
     Navigation0HeaderComponent,
     Navigation1ThreadsComponent,
     Navigation2ChannelsComponent,
-    Navigation3DirectMessagesComponent
+    Navigation3DirectMessagesComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

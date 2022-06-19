@@ -10,6 +10,7 @@ import { Navigation1ThreadsComponent } from './navigation-subcomponents/navigati
 import { Navigation2ChannelsComponent } from './navigation-subcomponents/navigation2-channels/navigation2-channels.component';
 import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/navigation3-direct-messages/navigation3-direct-messages.component';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
+    MatTreeModule
     
   ],
   providers: [],

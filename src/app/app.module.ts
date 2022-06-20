@@ -11,6 +11,7 @@ import { Navigation2ChannelsComponent } from './navigation-subcomponents/navigat
 import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/navigation3-direct-messages/navigation3-direct-messages.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTreeModule} from '@angular/material/tree';
+import { ThreadComponent } from './thread/thread.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,7 @@ import {MatTreeModule} from '@angular/material/tree';
     Navigation1ThreadsComponent,
     Navigation2ChannelsComponent,
     Navigation3DirectMessagesComponent,
-
-
+    ThreadComponent
   ],
   imports: [
     BrowserModule,

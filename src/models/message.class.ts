@@ -1,4 +1,4 @@
-export interface Message {
+export class Message {
     author: string;
     timestamp: string;
     channelName: string;

@@ -9,10 +9,11 @@ import { Navigation0HeaderComponent } from './navigation-subcomponents/navigatio
 import { Navigation1ThreadsComponent } from './navigation-subcomponents/navigation1-threads/navigation1-threads.component';
 import { Navigation2ChannelsComponent } from './navigation-subcomponents/navigation2-channels/navigation2-channels.component';
 import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/navigation3-direct-messages/navigation3-direct-messages.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTreeModule} from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTreeModule } from '@angular/material/tree';
 import { ThreadComponent } from './thread/thread.component';
 import { ChatComponent } from './chat/chat.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,9 @@ import { ChatComponent } from './chat/chat.component';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    MatTreeModule
-    
+    MatTreeModule,
+    FormsModule 
+
   ],
   providers: [],
   bootstrap: [AppComponent]

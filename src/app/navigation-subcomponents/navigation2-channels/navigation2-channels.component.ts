@@ -16,9 +16,8 @@ export class Navigation2ChannelsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createChannel() {
+  openCreateChannelDialog() {
     this.dialog.open(DialogCreateChannelComponent);
-    
   }
 
 }

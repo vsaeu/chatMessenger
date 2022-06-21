@@ -5,7 +5,7 @@ export class Message {
     public content: string = '';
     public image: string = '';
     public messageID: string = '';
-    // vergiss nicht zu pushen ;D 
+    
     constructor() {
         // this.author = 'author';
         // this.timestamp = timestamp;

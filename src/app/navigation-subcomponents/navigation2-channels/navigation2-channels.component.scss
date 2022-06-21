@@ -1,0 +1,31 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        mat-icon {
+            opacity: 1;
+        }
+    }
+
+    mat-icon {
+        opacity: 0;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            background-color: rgb(75, 74, 74);
+            border-radius: 6px;
+        }
+    }
+
+}
+
+.custom-tooltip {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 15px 20px;
+    animation-iteration-count: infinite;
+}

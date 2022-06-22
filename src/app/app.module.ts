@@ -11,9 +11,16 @@ import { Navigation2ChannelsComponent } from './navigation-subcomponents/navigat
 import { Navigation3DirectMessagesComponent } from './navigation-subcomponents/navigation3-direct-messages/navigation3-direct-messages.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ThreadComponent } from './thread/thread.component';
 import { ChatComponent } from './chat/chat.component';
 import { FormsModule } from '@angular/forms';
+import { DialogCreateChannelComponent } from './dialog-create-channel/dialog-create-channel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -25,15 +32,21 @@ import { FormsModule } from '@angular/forms';
     Navigation2ChannelsComponent,
     Navigation3DirectMessagesComponent,
     ThreadComponent,
-    ChatComponent
+    ChatComponent,
+    DialogCreateChannelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
     MatTreeModule,
-    FormsModule 
-
+    FormsModule,
+    MatTooltipModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

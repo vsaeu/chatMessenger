@@ -20,6 +20,7 @@ import { ChatComponent } from './chat/chat.component';
 import { FormsModule } from '@angular/forms';
 import { DialogCreateChannelComponent } from './dialog-create-channel/dialog-create-channel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThreadPersonComponent } from './thread-person/thread-person.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Navigation3DirectMessagesComponent,
     ThreadComponent,
     ChatComponent,
-    DialogCreateChannelComponent
+    DialogCreateChannelComponent,
+    ThreadPersonComponent
   ],
   imports: [
     BrowserModule,

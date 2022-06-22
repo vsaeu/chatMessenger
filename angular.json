@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "chatMessenger:build:production",
+            "firebaseProject": "chatmessenger-b5e99",
+            "firebaseHostingSite": "chatmessenger-b5e99"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatmessenger-b5e99": {
+      "hosting": {
+        "chatMessenger": [
+          "chatmessenger-b5e99"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatmessenger-b5e99"
+  }
+}

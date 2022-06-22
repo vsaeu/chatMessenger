@@ -9,7 +9,7 @@ import { Message } from 'src/models/message.class';
 export class ChatComponent implements OnInit {
 
   message = new Message();
-  messageContent: string;
+  
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class ChatComponent implements OnInit {
   sendMessage(){
     // this.messageContent = 'funktioniert';
     console.log('Message is: ', this.message );
-    this.message.content = this.messageContent;
-    console.log('Message content is : ', this.messageContent );
+    let content = this.message.content;
+    console.log('Message content is : ', content );
   }
 }

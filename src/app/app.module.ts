@@ -20,7 +20,16 @@ import { ChatComponent } from './chat/chat.component';
 import { FormsModule } from '@angular/forms';
 import { DialogCreateChannelComponent } from './dialog-create-channel/dialog-create-channel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+<<<<<<< HEAD
 import { ThreadPersonComponent } from './thread-person/thread-person.component';
+=======
+import {MatButtonModule} from '@angular/material/button';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+>>>>>>> 49fae880788666f23684fedbc2b4e626ed15ddae
 
 @NgModule({
   declarations: [
@@ -46,7 +55,12 @@ import { ThreadPersonComponent } from './thread-person/thread-person.component';
     MatDialogModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

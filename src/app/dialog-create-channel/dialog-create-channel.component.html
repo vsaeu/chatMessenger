@@ -1,4 +1,4 @@
-<mat-form-field appearance="outline">
+<!-- <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
     <input matInput placeholder="z.B. angular">
 </mat-form-field>
@@ -8,3 +8,25 @@
     <input matInput>
     <mat-hint>Worum geht es in diesem Channel?</mat-hint>
 </mat-form-field>
+<button mat-raised-button>Pick one</button> -->
+
+<ul>
+    <li>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="channelName">
+      </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill">
+          <mat-label>description</mat-label>
+          <input matInput [(ngModel)]="channelDescription">
+        </mat-form-field>
+      </li>
+    <li>
+      <button mat-raised-button >Abbrechen</button>
+      <button mat-raised-button (click)="createChannel()" >Erstellen</button>
+    </li>
+
+  </ul>
+  

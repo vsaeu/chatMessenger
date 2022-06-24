@@ -28,6 +28,9 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SingleThreadComponent } from './single-thread/single-thread.component';
+import { ThreadAnswerComponent } from './thread-answer/thread-answer.component';
+
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { SingleThreadComponent } from './single-thread/single-thread.component';
     ChatComponent,
     DialogCreateChannelComponent,
     ThreadPersonComponent,
-    SingleThreadComponent
+    SingleThreadComponent,
+    ThreadAnswerComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,8 @@ import { SingleThreadComponent } from './single-thread/single-thread.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

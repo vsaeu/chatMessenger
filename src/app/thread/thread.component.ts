@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { getLocaleEraNames } from '@angular/common';
+import { Component,Input, OnInit } from '@angular/core';
+import { Thread } from 'src/models/thread.class';
+import { ChannelServiceService } from '../channel-service.service';
+
 
 @Component({
   selector: 'app-thread',
@@ -6,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./thread.component.scss']
 })
 export class ThreadComponent implements OnInit {
+    
+  message;
 
-  constructor() { }
+  constructor(public ts: ChannelServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  sendMessage(){   
+    this.ts.allThreadAnswers.push(this.message);
+    console.log(this.ts.allThreadAnswers);
   }
 
 }

@@ -7,6 +7,9 @@ export class ChannelServiceService {
 
   allChannels = [];
   allThreads = [];
+  allThreadAnswers = [];
+  
+  
 
 
   constructor() { }

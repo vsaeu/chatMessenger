@@ -1,10 +1,10 @@
 export class Message {
-     author: string = '';
-     timestamp: string = '';
-     channelName: string = '';
-     content: string = '';
-     image: string = '';
-     messageID: string = '';
+    public author: string[] = [];
+    public timestamp: string[] = [];
+    public channelName: string[] = [];
+    public content: string[] = [];
+    public image: string[] = [];
+    public messageID: string[] = [];
     
     constructor(obj?: any) {
         this.author = obj ? obj.author : '';
@@ -14,4 +14,15 @@ export class Message {
         this.image = obj ? obj.image : '';
         this.messageID = obj ? obj.messageID : '';
     }
+    public toJson(){
+        return {
+          author: this.author,
+          timestamp: this.author,
+          channelName: this.channelName,
+          content: this.content,
+          image: this.image,
+          messageID: this.messageID
+          
+        }
+      }
 }

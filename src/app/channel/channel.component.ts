@@ -8,7 +8,7 @@ import { Channel } from 'src/models/channel.class';
 })
 export class ChannelComponent implements OnInit {
 
-  channel: Channel = new Channel();
+  // channel: Channel = new Channel();
 
   constructor() { }
 

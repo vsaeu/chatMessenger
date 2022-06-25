@@ -17,6 +17,7 @@ export class DialogCreateChannelComponent implements OnInit {
   constructor(public cs: ChannelServiceService, public dialogRef: MatDialogRef<DialogCreateChannelComponent>) { }
 
   channelIdCounter = this.cs.channelIdCounter;
+  thread= "Thread1"
 
 
   newChannel = {}; 
@@ -25,14 +26,16 @@ export class DialogCreateChannelComponent implements OnInit {
   }
 
   createChannel(){
-    this.newChannel = new Channel(this.channelName, this.channelDescription, this.channelIdCounter);
+    this.newChannel = new Channel(this.thread, this.channelName, this.channelDescription, this.channelIdCounter);
     console.log('newChannel is : ', this.newChannel);
     this.cs.allChannels.push(this.newChannel);
     console.log('allChannels after push is : ', this.cs.allChannels);
     this.cs.channelIdCounter++; 
     console.log("activeChannelID: ", this.cs.channelIdCounter)
+    // console.log("Thread Zugriff: ", this.newChannel.threads)
     this.channelIdCounter = this.cs.channelIdCounter;
     this.dialogRef.close();
+
   }
 
   onNoClick(): void {

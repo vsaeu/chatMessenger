@@ -3,19 +3,24 @@
     <mat-icon (click)="openCreateChannelDialog()" matTooltipClass="custom-tooltip" matTooltipPosition="above"  matTooltip="Channels hinzufügen">add</mat-icon>
 </div>
 
+<p  *ngFor="let channel of cs.allChannels" (click)="openChannel(channel.channelID)" class="single-channel-nav">
+    # {{channel.channelName}}
+    <br>
+</p>
 
 
-<span (click)="openChannel()">
-    <mat-icon>chat</mat-icon>
-    Allgemein
-</span> <br>
 
-<span>
-    <mat-icon>chat</mat-icon>
-    Abgular
-</span> <br>
+<p (click)="openChannel(-1)" class="single-channel-nav">
 
-<span>
-    <mat-icon>chat</mat-icon>
-    HTML/CSS
-</span> <br>
+    # Allgemein (hard code)
+</p>
+
+<p  (click)="openChannel(-2)" class="single-channel-nav">
+    # Angular (hard code)
+</p>
+
+<p (click)="openChannel(-3)" class="single-channel-nav">
+    # HTML/CSS (hard code)
+</p>
+
+<!-- <app-dog-card *ngFor="let i of [0,1,2,3,4,5]" [imgSrc]="postImgs[i]" [text]="postTexts[i]"> -->

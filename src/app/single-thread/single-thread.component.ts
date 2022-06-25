@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChannelServiceService } from '../channel-service.service';
+
 
 @Component({
   selector: 'app-single-thread',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleThreadComponent implements OnInit {
 
-  constructor() { }
+  constructor(public cs: ChannelServiceService) { }
 
   ngOnInit(): void {
   }

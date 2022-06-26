@@ -7,11 +7,11 @@ export class ChannelServiceService {
 
   allChannels = [];
   allThreads = [];
-  activeChannel: number = 0; // ChannelID
-  activeThread: number = 0; //ThreadID
+  activeChannelID: number = 0; // ChannelID
+  activeThreadID: number = 0; //ThreadID
 
-  channelIdCounter: number=0;
-  threadIdCounter;
+  channelIDCounter: number=0;
+  threadIDCounter: number=0;
 
 
   constructor() { }

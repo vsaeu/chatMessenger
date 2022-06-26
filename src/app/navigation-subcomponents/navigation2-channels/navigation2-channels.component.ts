@@ -19,7 +19,7 @@ export class Navigation2ChannelsComponent implements OnInit {
   }
 
   openChannel(channelID){
-    this.cs.activeChannel=channelID;
+    this.cs.activeChannelID=channelID;
     // Rendern in Channel Komponente
   }
 

@@ -5,14 +5,14 @@ export class Channel {
    public channelName: string = '';
    public channelDescription: string = '';
    public channelID: string = '';
-   public threads: string;
+   public threads: any = [];
 
-   constructor(channelName, channelDescription, channelID, thread) {
+   constructor(channelName, channelDescription, channelID) {
 
     this.channelName = channelName;
     this.channelDescription = channelDescription;
     this.channelID = channelID;
-    this.threads = thread
+
    }
 
 }

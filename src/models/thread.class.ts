@@ -1,8 +1,13 @@
 export class Thread {
-   public channelName: string = '';
-   public threadID: string = '';
-   public messages: [] = [];
+   public channelID: number = 0;
+   public threadID: number = 0;
+   public messages: any = [];
 
-    constructor() {}
+    constructor(activeChannelID, threadID, message) {
+
+        this.channelID = activeChannelID;
+        this.threadID = threadID;
+        this.messages.push(message); 
+    }
 
 }

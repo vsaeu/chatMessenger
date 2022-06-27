@@ -20,6 +20,7 @@ export class ThreadComponent implements OnInit {
 
   sendMessage(){   
     this.ts.allThreadAnswers.push(this.message);
+    this.message = '';
     console.log(this.ts.allThreadAnswers);
   }
 

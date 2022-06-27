@@ -1,8 +1,18 @@
 .commentaries{   
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 16px;
+
   img {
     width: 36px;
     height: 36px;
     border-radius: 20%;
     object-fit: cover;
+  }
+
+  &:hover {
+    cursor: pointer ;
+    background-color: rgba(0,0,0,0.1);
   }
 }

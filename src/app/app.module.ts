@@ -29,6 +29,9 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SingleThreadComponent } from './single-thread/single-thread.component';
 import { ThreadAnswerComponent } from './thread-answer/thread-answer.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 
@@ -62,6 +65,9 @@ import { ThreadAnswerComponent } from './thread-answer/thread-answer.component';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

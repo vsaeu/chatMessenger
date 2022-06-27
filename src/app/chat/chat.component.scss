@@ -1,0 +1,26 @@
+.chat-box {
+    height: 10rem;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    position: relative;
+    .tools {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        color: black;
+    }
+    textarea {
+        height: 100%;
+        width: 100%;
+        resize: none;
+        outline: -webkit-focus-ring-color auto 1px;
+        padding: 33px;
+        box-sizing: border-box;
+    }
+    button {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
+}

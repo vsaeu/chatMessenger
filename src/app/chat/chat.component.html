@@ -1,10 +1,14 @@
 <div class="chat-container">
     <div>
-        <div>
-            Hallo Welt
+
+        <div class="chat-box">
+            <div class="tools">
+                verschiedene Tools
+            </div>
+            <textarea [(ngModel)]="msg.content"></textarea>
+            <button (click)="sendMessage()">Senden</button>
         </div>
-        <input [(ngModel)]="threadContent">
-        <button (click)="sendMessage()">Senden</button>
+
 
     </div>
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Channel } from 'src/models/channel.class';
+import { ChannelServiceService } from '../channel-service.service';
+
 
 @Component({
   selector: 'app-channel',
@@ -8,9 +10,10 @@ import { Channel } from 'src/models/channel.class';
 })
 export class ChannelComponent implements OnInit {
 
-  channel: Channel = new Channel();
+  // channel: Channel = new Channel();
 
-  constructor() { }
+  constructor(public cs: ChannelServiceService) { }
+  allThreads: any = this.cs.allThreads;
 
   ngOnInit(): void {
   }

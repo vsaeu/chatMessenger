@@ -11,9 +11,10 @@ import { ChannelServiceService } from '../channel-service.service';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
+  typedMessage;
   msg = new Message;
   chatId: string;
-  newThread = new Thread();
+  newThread;
   threadContent: string = '';
 
   constructor(public cs: ChannelServiceService, private firestore: AngularFirestore,private route: ActivatedRoute) { }
@@ -45,19 +46,23 @@ export class ChatComponent implements OnInit {
     // .doc(params['id'])
     console.log(this.msg);
     // this.save();
+
+    this.newThread = new Thread(this.cs.activeChannelID, this.cs.threadIDCounter, this.typedMessage)
     
-    
+    this.cs.allThreads.push(this.newThread);
+    this.cs.threadIDCounter++;
     
     // this.messageContent = 'funktioniert';
     // console.log('Message is: ', this.message );
-    // let content = this.message.content;
+    // let content = this.msg.content;
     // console.log('Message content is : ', content );
 
     //versuch Thread zu erstellen:
     
-    // console.log('newThread is : ', this.newThread);
+    console.log('newThread is : ', this.newThread);
+    console.log('allThreads', this.cs.allThreads)
     // this.newThread.messages = this.threadContent;
-    // this.cs.allThreads.push(this.newThread);
+
     // console.log('messages [0] at [0] after push is : ', this.cs.allThreads[0].messages);
     // console.log(this.cs.allThreads);
     

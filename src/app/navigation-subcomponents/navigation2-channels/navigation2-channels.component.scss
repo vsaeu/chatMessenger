@@ -19,7 +19,6 @@
             border-radius: 6px;
         }
     }
-
 }
 
 .custom-tooltip {
@@ -28,4 +27,13 @@
     font-size: 14px;
     padding: 15px 20px;
     animation-iteration-count: infinite;
+}
+
+.single-channel-nav {
+
+padding-left: 1rem;
+    &:hover{
+        background-color: rgba(0,0,0,.1);
+        cursor: pointer;
+    }
 }

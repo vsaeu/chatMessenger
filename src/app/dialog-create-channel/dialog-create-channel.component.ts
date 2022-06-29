@@ -27,11 +27,11 @@ export class DialogCreateChannelComponent implements OnInit {
 
   createChannel(){
     this.newChannel = new Channel(this.channelName, this.channelDescription, this.channelIDCounter);
-    console.log('newChannel is : ', this.newChannel);
+    // console.log('newChannel is : ', this.newChannel);
     this.cs.allChannels.push(this.newChannel);
-    console.log('allChannels after push is : ', this.cs.allChannels);
+    // console.log('allChannels after push is : ', this.cs.allChannels);
     this.cs.channelIDCounter++; 
-    console.log("activeChannelID: ", this.cs.channelIDCounter)
+    // console.log("activeChannelID: ", this.cs.channelIDCounter)
     // console.log("Thread Zugriff: ", this.newChannel.threads)
     this.channelIDCounter = this.cs.channelIDCounter;
     this.dialogRef.close();

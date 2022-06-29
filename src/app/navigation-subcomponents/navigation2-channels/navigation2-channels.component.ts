@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogCreateChannelComponent } from 'src/app/dialog-create-channel/dialog-create-channel.component';
 import { Channel } from 'src/models/channel.class';
@@ -18,13 +18,17 @@ export class Navigation2ChannelsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openChannel(channelID){
-    this.cs.activeChannelID=channelID;
+  openChannel(channelID) {
+    this.cs.activeChannelID = channelID;
+    console.log('active Channel ID:', this.cs.activeChannelID)
     // Rendern in Channel Komponente
+    this.cs.renderThreadsByChannelID();
   }
 
   openCreateChannelDialog() {
     this.dialog.open(DialogCreateChannelComponent);
+    this.cs.renderThreadsByChannelID();
+
   }
 
 }

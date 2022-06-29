@@ -44,13 +44,14 @@ export class ChatComponent implements OnInit {
 
   sendMessage(){
     // .doc(params['id'])
-    console.log(this.msg);
+    // console.log(this.msg);
     // this.save();
 
     this.newThread = new Thread(this.cs.activeChannelID, this.cs.threadIDCounter, this.typedMessage)
     
     this.cs.allThreads.push(this.newThread);
     this.cs.threadIDCounter++;
+    this.cs.renderThreadsByChannelID();
     
     // this.messageContent = 'funktioniert';
     // console.log('Message is: ', this.message );
@@ -59,8 +60,8 @@ export class ChatComponent implements OnInit {
 
     //versuch Thread zu erstellen:
     
-    console.log('newThread is : ', this.newThread);
-    console.log('allThreads', this.cs.allThreads)
+    // console.log('newThread is : ', this.newThread);
+    // console.log('allThreads', this.cs.allThreads)
     // this.newThread.messages = this.threadContent;
 
     // console.log('messages [0] at [0] after push is : ', this.cs.allThreads[0].messages);

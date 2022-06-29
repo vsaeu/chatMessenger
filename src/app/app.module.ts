@@ -28,9 +28,11 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SingleThreadComponent } from './single-thread/single-thread.component';
+import { ThreadAnswerComponent } from './thread-answer/thread-answer.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -47,7 +49,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     ChatComponent,
     DialogCreateChannelComponent,
     ThreadPersonComponent,
-    SingleThreadComponent
+    SingleThreadComponent,
+    ThreadAnswerComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -64,10 +69,12 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
+    MatMenuModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

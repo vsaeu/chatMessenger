@@ -7,7 +7,8 @@ import { ChannelServiceService } from '../channel-service.service';
   styleUrls: ['./thread-answer.component.scss']
 })
 export class ThreadAnswerComponent implements OnInit {  
- 
+  showToolBar = true;
+
   constructor(public ts: ChannelServiceService) { }
 
   ngOnInit(): void {

@@ -1,9 +1,11 @@
 <div class="thread-container">
   <h2>Thread <span class="fond-style">gruppenarbeit-238-slack</span></h2>    
   <app-thread-person></app-thread-person>  
-  <app-thread-answer ></app-thread-answer><br><br>
-  <input [(ngModel)]="message" type="text">
-  <button (click)="sendMessage()">Enter</button> 
+  <app-thread-message></app-thread-message><br>
+  <div class="inputStyle">
+    <input [(ngModel)]="message" type="text">
+    <button (click)="sendMessage()">Enter</button> 
+  </div>  
 </div>
 
 

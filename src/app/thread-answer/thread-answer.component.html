@@ -1,17 +1,29 @@
-<div class="commentaries" *ngFor="let message of ts.allThreadAnswers; let i = index">
-  <img src="assets/img/thread/user-24.png"/>
-  {{message}}
+<div class="commentaries" (mouseover)="setShowToolBar(true)" (mouseleave)="setShowToolBar(false)" >
 
-  <mat-toolbar *ngIf="showToolBar"  class="toolbar-appear">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <!-- <div>
+    <img src="assets/img/thread/user-24.png"/>
+    User
+    {{ message }}
+  </div> -->
+  <div class="commentaries">
+    <img src="assets/img/thread/user-24.png" />
+    <div class="dateStyle">
+      <div>
+        <span class="fondStyle1">Hans Meier</span><span class="fondStyle2">17. Juni um 22:58 Uhr</span>
+      </div>
+      <p class="textStyle">Text Text</p>
+    </div>    
+  </div>
+      
+  <mat-toolbar *ngIf="showToolBar" class="mat-toolbar">
+    <button mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button mat-icon-button>
       <mat-icon>favorite</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button mat-icon-button>
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>

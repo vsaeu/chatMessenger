@@ -34,6 +34,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ThreadMessageComponent } from './thread-message/thread-message.component';
 
 
 
@@ -51,7 +52,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     DialogCreateChannelComponent,
     ThreadPersonComponent,
     SingleThreadComponent,
-    ThreadAnswerComponent
+    ThreadAnswerComponent,
+    ThreadMessageComponent
     
     
   ],

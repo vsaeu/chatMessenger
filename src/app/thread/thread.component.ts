@@ -1,8 +1,5 @@
-import { getLocaleEraNames } from '@angular/common';
-import { Component,Input, OnInit } from '@angular/core';
-import { Thread } from 'src/models/thread.class';
+import { Component, OnInit } from '@angular/core';
 import { ChannelServiceService } from '../channel-service.service';
-
 
 @Component({
   selector: 'app-thread',
@@ -20,8 +17,7 @@ export class ThreadComponent implements OnInit {
 
   sendMessage(){   
     this.ts.allThreadAnswers.push(this.message);
-    this.message = '';
-    console.log(this.ts.allThreadAnswers);
+    this.message = '';    
   }
 
 }

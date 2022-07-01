@@ -1,4 +1,6 @@
 .commentaries{
+  display: flex;
+  padding: 0 20px;
   box-shadow: 1px 1px 1px rgb(0, 0, 0,0.2);  
    
   img {
@@ -7,4 +9,22 @@
     border-radius: 20%;
     object-fit: cover;
   }
+
+  .fondStyle1{
+    padding-left: 12px;
+    font-size: 20px;
+    font-weight: bold;    
+  }
+
+  .fondStyle2{
+    padding-left: 6px;
+    font-size: 14px;    
+    padding-top: 5px;    
+  }
+
+  .textStyle {
+    margin: 0;
+    padding-left: 12px;
+  }
 }
+

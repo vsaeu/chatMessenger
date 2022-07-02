@@ -1,17 +1,12 @@
-<div class="commentaries" (mouseover)="setShowToolBar(true)" (mouseleave)="setShowToolBar(false)" >
-
-  <!-- <div>
-    <img src="assets/img/thread/user-24.png"/>
-    User
-    {{ message }}
-  </div> -->
-  <div class="commentaries">
+<div (mouseover)="setShowToolBar(true)" (mouseleave)="setShowToolBar(false)" >
+ 
+  <div class="commentaries" >
     <img src="assets/img/thread/user-24.png" />
     <div class="dateStyle">
       <div>
         <span class="fondStyle1">Hans Meier</span><span class="fondStyle2">17. Juni um 22:58 Uhr</span>
       </div>
-      <p class="textStyle">Text Text</p>
+      <p class="textStyle">{{ message }}</p>
     </div>    
   </div>
       
@@ -26,29 +21,7 @@
     <button mat-icon-button>
       <mat-icon>share</mat-icon>
     </button>
-  </mat-toolbar>
-
-
-
-  
- <!--  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu> -->
-  
+  </mat-toolbar>  
 
 </div>
 

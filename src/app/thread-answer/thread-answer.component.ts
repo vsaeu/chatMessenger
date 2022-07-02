@@ -8,9 +8,7 @@ import { ChannelServiceService } from '../channel-service.service';
 })
 export class ThreadAnswerComponent implements OnInit {  
   showToolBar;
-  message;
-
-  
+  message;  
 
   constructor( public ts: ChannelServiceService ) {
     this.message = ts.allThreadAnswers;

@@ -13,7 +13,7 @@ export class ChannelComponent implements OnInit {
   // channel: Channel = new Channel();
 
   constructor(public cs: ChannelServiceService) { }
-  allThreads: any = this.cs.renderedThreads;
+  allThreads: any = this.cs.allThreads;
 
   ngOnInit(): void {
   }

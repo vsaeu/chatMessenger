@@ -12,14 +12,19 @@
 
     <div class="chat-sub-container">
 
-        <div class="single-chat" *ngFor="let thread of allThreads; let i = index">    <img src="assets/img/channel/user.png">
-            <div class="chat-content" >
-                <p> Max Mustermann <span>14:42 Uhr</span></p> {{thread.messages[0]}}  
+        <div class="single-chat" 
+        *ngFor="let thread of allThreads; let i = index"
+        >
+        <!-- <div ngIf="thread.ChannelID==cs.activeChannelID" > -->
+            <img src="assets/img/channel/user.png">
+            <div class="chat-content">
+                <p> Max Mustermann <span>14:42 Uhr</span></p> {{thread.messages[0]}}
             </div>
-            </div>
+        </div>
+    <!-- </div> -->
         <!-- Version 0 <app-single-thread  *ngFor="let thread of allThreads; let i = index"> {{thread.messages[0]}}  </app-single-thread> -->
         <!-- <app-dog-card *ngFor="let i of [0,1,2,3,4,5]" [imgSrc]="postImgs[i]" [text]="postTexts[i]"></app-dog-card> -->
-    
+
 
     </div>
     <app-chat></app-chat>
@@ -40,7 +45,7 @@
     <app-proposals></app-proposals>
   </div> -->
 
-  <!-- 
+<!-- 
     Todos:
     1) Thread Komponente erstellen
     2) Channel component aktualisieren & mit input Variablen füllen

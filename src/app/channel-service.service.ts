@@ -8,7 +8,7 @@ export class ChannelServiceService {
 
   allChannels = [];
   allThreads = [];
-  allThreadAnswers =[]; //Bitte noch nicht löschen (Christian)
+  allThreadAnswers: any	 =[]; //Bitte noch nicht löschen (Christian)
   renderedThreads: any = [];
   activeChannelID: number = 0; // ChannelID
   activeThreadID: number = 0; //ThreadID

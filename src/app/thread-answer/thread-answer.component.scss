@@ -1,7 +1,11 @@
+.treadContainer {
+  position: relative;
+}
+
 .commentaries{
   position: relative;
   display: flex;
-  padding: 0 20px;
+  padding: 10px 20px;
   box-shadow: 1px 1px 1px rgb(0, 0, 0,0.2);  
    
   img {

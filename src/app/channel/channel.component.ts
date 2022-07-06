@@ -12,10 +12,14 @@ export class ChannelComponent implements OnInit {
 
   // channel: Channel = new Channel();
 
-  constructor(public cs: ChannelServiceService) { }
-  allThreads: any = this.cs.allThreads;
+  constructor(public cs: ChannelServiceService) { 
+  }
+
+  allThreadsInChannel = this.cs.renderedThreads;
 
   ngOnInit(): void {
   }
+
+
 
 }

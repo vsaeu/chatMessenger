@@ -7,9 +7,11 @@ import { Thread } from 'src/models/thread.class';
 export class ChannelServiceService {
 
   allChannels = [];
+  
+  renderedThreads = [];
   allThreads = [];
   allThreadAnswers: any	 =[]; //Bitte noch nicht löschen (Christian)
-  renderedThreads: any = [];
+
   activeChannelID: number = 0; // ChannelID
   activeThreadID: number = 0; //ThreadID
 
@@ -18,6 +20,9 @@ export class ChannelServiceService {
   constructor() { }
 
   renderThreadsByChannelID() {
+    console.log('vor Filter this.allThreads', this.allThreads);
+    console.log(' vor Filter renderedThreads', this.renderedThreads)
+
     this.renderedThreads = this.allThreads.filter((Thread) => Thread.channelID == this.activeChannelID);
     console.log('this.allThreads', this.allThreads);
     console.log('renderedThreads', this.renderedThreads)

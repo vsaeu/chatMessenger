@@ -13,7 +13,7 @@
     <div class="chat-sub-container">
 
         <div class="single-chat" 
-        *ngFor="let thread of allThreads; let i = index"
+        *ngFor="let thread of cs.renderedThreads; let i = index"
         >
         <!-- <div ngIf="thread.ChannelID==cs.activeChannelID" > -->
             <img src="assets/img/channel/user.png">

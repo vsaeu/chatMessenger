@@ -1,10 +1,10 @@
 export class Message {
-    public author: string[] = [];
-    public timestamp: string[] = [];
-    public channelName: string[] = [];
-    public content: string[] = [];
-    public image: string[] = [];
-    public messageID: string[] = [];
+    author: string;
+    timestamp;
+    channelName: string;
+    content: string;
+    image: string;
+    messageID: string;
     
     constructor(obj?: any) {
         this.author = obj ? obj.author : '';
@@ -17,7 +17,7 @@ export class Message {
     public toJson(){
         return {
           author: this.author,
-          timestamp: this.author,
+          timestamp: this.timestamp,
           channelName: this.channelName,
           content: this.content,
           image: this.image,

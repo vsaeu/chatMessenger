@@ -12,7 +12,7 @@ import { ChannelServiceService } from '../channel-service.service';
 })
 export class ChatComponent implements OnInit {
   typedMessage;
-  msg = new Message;
+  msg = new Message();
   chatId: string;
   newThread;
   threadContent: string = '';
@@ -52,6 +52,12 @@ export class ChatComponent implements OnInit {
     this.cs.allThreads.push(this.newThread);
     this.cs.threadIDCounter++;
     this.cs.renderThreadsByChannelID();
+
+    // Daten speichern
+    
+    this.msg.timestamp = new Date().toLocaleString();
+    this.msg.author = 'Max Mustermann';
+     console.log('Array ist ', this.msg.toJson());
     
     // this.messageContent = 'funktioniert';
     // console.log('Message is: ', this.message );

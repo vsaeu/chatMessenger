@@ -1,3 +1,7 @@
+# Wer hat bock das angefangene Projekt wieder anzufangen und auch zuende zubringen?
+
+Da wir jetzt nach 2 Jahren viel mehr Erfahrungen sammeln konnten, würde es mich freuen, da uns auszutauschen :D
+
 # ChatMessenger
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
